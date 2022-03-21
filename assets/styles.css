@@ -1,0 +1,22 @@
+.navigation {
+    position: relative;
+    height: 75px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: rgba(52, 63, 75, 0.15);
+}
+.navigation .logo {
+    float: left;
+    height: 75px;
+}
+.navigation-button {
+    padding: 15px 0;
+    text-align: center;
+}
+.navigation a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    width: fit-content;
+    padding: 15px ;
+}

@@ -19,30 +19,13 @@
     <div id="app">
         <navigation-bar></navigation-bar>
         <h2 class="title">Welcome to Sloth Hostel</h2>
-
-        <div class="footer">
-            <span>
-                <img class="logo" src="assets/images/logo.png" alt=" Opet logo">
-            </span>
-            <span>
-                <a href="./index.html">Home</a>
-                <a href="./about.html">About us</a>
-                <a href="./contact.html">Contact Us</a>
-            </span>
-            <span id="contact-info">
-                <p>Adresa: Štrosmajerova 16, Novi Sad</p>
-                <p>Email: mail@hostel.com</p>
-                <p>Telelphone: 021/455-213</p>
-            </span>
-            <span id="subscribe">
-                <label for="subs" style="color: rgba(255, 255, 255, 0.8);">Get out newsletter: </label>
-                <input type="mail" name="mail" id="subs">
-            </span>
-        </div>
+        <footer-bar></footer-bar>
     </div>
 
     <script src="main.js"></script>
+    <script src="formInputHandling.js"></script>
     <script src="./components/NavigatonBar.js"></script>
+    <script src="./components/Footer.js"></script>
     <script>
         const mountedApp = app.mount('#app')
     </script>

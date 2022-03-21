@@ -6,11 +6,39 @@
     <title>Hostel Website</title>
     <link rel="stylesheet" href="assets/styles.css">
     <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        body {
+            background-image: url('assets/images/background.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
         <navigation-bar></navigation-bar>
+        <h2 class="title">Welcome to Sloth Hostel</h2>
+
+        <div class="footer">
+            <span>
+                <img class="logo" src="assets/images/logo.png" alt=" Opet logo">
+            </span>
+            <span>
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About us</a>
+                <a href="./contact.html">Contact Us</a>
+            </span>
+            <span id="contact-info">
+                <p>Adresa: Štrosmajerova 16, Novi Sad</p>
+                <p>Email: mail@hostel.com</p>
+                <p>Telelphone: 021/455-213</p>
+            </span>
+            <span id="subscribe">
+                <label for="subs" style="color: rgba(255, 255, 255, 0.8);">Get out newsletter: </label>
+                <input type="mail" name="mail" id="subs">
+            </span>
+        </div>
     </div>
 
     <script src="main.js"></script>

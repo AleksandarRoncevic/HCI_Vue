@@ -1,8 +1,11 @@
 .navigation {
-    position: relative;
-    height: 75px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 0px;
     width: 100%;
-    margin-bottom: 15px;
+    height: 75px;
     background-color: rgba(52, 63, 75, 0.15);
 }
 .navigation .logo {
@@ -19,4 +22,41 @@
     text-decoration: none;
     width: fit-content;
     padding: 15px ;
+}
+
+.title {
+    margin-top: 125px ;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 300;
+    color: rgb(0, 56, 31);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(132, 36, 22);
+}
+.footer .logo {
+    float: left;
+    height: 150px;
+}
+.footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 15px;
+}
+
+.footer span {
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+        padding: 20px;
+}
+
+#contact-info{
+    color: rgba(255, 255, 255, 0.8);
 }

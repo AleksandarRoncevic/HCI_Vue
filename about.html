@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <title>Hostel Website</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/about.css">
     <script src="https://unpkg.com/vue@3"></script>
-    <title>Document</title>
+
+    <style>
+        body {
+            background-image: url('assets/images/about.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: fit-content;
+        }
+    </style>
 </head>
+
+
 <body>
-    <h1>Ovo je about us stranica.</h1>
+    <div id="app">
+        <navigation-bar></navigation-bar>
+        <div class="textbox box">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Etiam massa tortor, rutrum sit amet rutrum a, tincidunt eget tortor.
+                Proin at felis maximus, lobortis justo a, dignissim sapien.
+            </p>
+        </div>
+        <div class="owner-image box">
+            <img src="assets/images/owner.png" alt="Owner's photo" height="250">
+            <p>Owner's name & surname</p>
+        </div>
+
+        <div class="worker-row">
+            <div v-for="i in [1,2,3]" class="box">
+                <img src="assets/images/worker.jpeg" alt="Worker" height="50">
+                <p>Worker {{i}}</p>
+            </div>
+        </div>
+        <footer-bar></footer-bar>
+
+        <script src="main.js"></script>
+        <script src="formInputHandling.js"></script>
+        <script src="./components/NavigatonBar.js"></script>
+        <script src="./components/Footer.js"></script>
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
+    </div>
 </body>
+
 </html>

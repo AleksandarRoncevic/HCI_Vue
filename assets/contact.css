@@ -1,0 +1,39 @@
+.container {
+    background-color: rgb(0, 56, 30);
+    border-radius: 25px;
+    width: 35%;
+    float: left;
+    height: 200px;
+    margin-left: 100px;
+    text-align: center;
+}
+.container ol {
+    display: inline-block;
+    color: white;
+}
+.container li {
+    margin-top: 10px;
+}
+.title-contact {
+    margin-top: 100px ;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 500;
+    color: rgb(0, 56, 31);
+}
+.card {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+.contact-form {
+    padding: 10px;
+    float: right;
+    height: 350px;
+    color: white;
+    width: 40%;
+    background-color: rgb(0, 56, 30);
+    border-radius: 25px;
+}

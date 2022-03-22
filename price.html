@@ -35,11 +35,24 @@
                     </button>
                 </span>
             </div>
+            <div class="catalog">
+                <span :class="[!showPrices ? 'tabs active' : 'tabs']" @click="setShowPrices()">Services in
+                    Room</span>
+                <span :class="[showPrices ? 'tabs active' : 'tabs']" @click="setShowPrices()">Prices</span>
+            </div>
+            <div style="border: 1px solid rgb(1, 1, 1, 0.6); width: 100%; margin-top: 5px;"></div>
             <div>
-                <ul>
+                <ul v-if="!showPrices">
                     <li>Wi-fi</li>
                     <li>Air Conditioning</li>
+                    <li>All 3 meals included</li>
+                    <li>Washing clothes for 5$</li>
+                    <li>Fresh sheets x 2 a week</li>
+                    <li>Pool table and Table Tenis</li>
+                    <li>Chill out room</li>
+                    <li>TV room</li>
                 </ul>
+                <price-table v-else></price-table>
             </div>
         </div>
         <footer-bar></footer-bar>
@@ -47,8 +60,8 @@
 
 
     <script src=" main.js"></script>
-    <script src="formInputHandling.js"></script>
     <script src="./components/NavigatonBar.js"></script>
+    <script src="./components/PriceTable.js"></script>
     <script src="./components/Footer.js"></script>
     <script>
         const mountedApp = app.mount('#app')

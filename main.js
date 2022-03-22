@@ -2,7 +2,8 @@ const app = Vue.createApp({
     data() {
         return {
             rooms: [...roomsOffer],
-            roomIndex: 0
+            roomIndex: 0,
+            showPrices: false
         };
     },
     methods: {
@@ -17,7 +18,10 @@ const app = Vue.createApp({
         },
         prevRoom() {
             this.roomIndex--;
-        }
+        },
+        setShowPrices(val) {
+            this.showPrices = !this.showPrices;
+        },
     }
 });
 

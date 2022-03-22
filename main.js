@@ -19,7 +19,7 @@ const app = Vue.createApp({
         prevRoom() {
             this.roomIndex--;
         },
-        setShowPrices(val) {
+        setShowPrices() {
             this.showPrices = !this.showPrices;
         },
     }

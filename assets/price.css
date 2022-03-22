@@ -1,11 +1,11 @@
 .content {
     position: relative;
     height: 85vh;
+    margin-top: 75px;
 }
 .room {
     position: relative;
     padding: 10px;
-    top: 15%;
     left: 7%;
     width: 85%;
     height: 40%;
@@ -37,7 +37,7 @@
     width: 100%;
     display: inline-block;
     text-align: center;
-    margin-top: 110px;
+    margin-top: 30px;
 }
 
 .buttons button {

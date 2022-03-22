@@ -1,0 +1,59 @@
+.room {
+    position: relative;
+    padding: 10px;
+    top: 15%;
+    left: 7%;
+    width: 85%;
+    height: 40%;
+    border: 0.5px solid black;   
+}
+.room-image {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    padding: 7px;
+    border: 2px solid black;
+}
+.room-text {
+    position: absolute;
+    width: 40%;
+    left: 15px;
+    top: 15%;
+    text-align: center;
+}
+.room-text h3{
+    font-weight: 700;
+}
+.room-text p:nth-of-type(2n) {
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.buttons {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.buttons button {
+    padding: 10px;
+    height: 45px;
+    margin-right: 15px;
+    background-color: #3D9153;
+    color: white;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17),
+    inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
+    inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+    border-radius: 5px;
+}
+
+.buttons button:disabled {
+    background-color: grey;
+    color: black;
+    box-shadow: inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+}
+.content {
+    position: relative;
+    height: 85vh;
+}

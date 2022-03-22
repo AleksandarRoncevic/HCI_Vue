@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/price.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Hostel Website</title>
 </head>
+
 <body>
-    <h1>Pricing</h1>
+    <div id="app">
+        <navigation-bar></navigation-bar>
+        <div class="content">
+            <div class="room">
+                <div class="room-image">
+                    <img :src="getRoomImage(roomIndex)" alt="bedroom-picture" height="200">
+                </div>
+                <div class="room-text">
+                    <h3>{{rooms[roomIndex].count}}bed room</h3>
+                    <p>{{rooms[roomIndex].description}}</p>
+                    <p>Price: {{rooms[roomIndex].price}}$</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <span>
+                    <button @click="prevRoom()" class="room-btn" :disabled="roomIndex == 0">
+                        Previous Room
+                    </button>
+                </span>
+                <span>
+                    <button @click="nextRoom()" class="room-btn" :disabled="roomIndex == rooms.length-1">
+                        Next Room
+                    </button>
+                </span>
+            </div>
+            <div>
+                <ul>
+                    <li>Wi-fi</li>
+                    <li>Air Conditioning</li>
+                </ul>
+            </div>
+        </div>
+        <footer-bar></footer-bar>
+    </div>
+
+
+    <script src=" main.js"></script>
+    <script src="formInputHandling.js"></script>
+    <script src="./components/NavigatonBar.js"></script>
+    <script src="./components/Footer.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
 </body>
+
 </html>

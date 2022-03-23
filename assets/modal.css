@@ -10,10 +10,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
-.invisible {
-    display: none;
-}
-
 .modal-header {
     padding: 15px;
     background-color: rgb(0, 56, 31);

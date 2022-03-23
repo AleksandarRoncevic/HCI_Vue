@@ -6,7 +6,8 @@ const app = Vue.createApp({
             showPrices: false,
             workers: ["Alex", "Paul", "Jonh"],
             owner: "Joahna Hanks",
-            showModal: true,
+            showModal: false,
+            reservationPrice: 0
         };
     },
     methods: {

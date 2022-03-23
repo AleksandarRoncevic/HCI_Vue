@@ -21,13 +21,6 @@
     font-weight: 500;
     color: rgb(0, 56, 31);
 }
-.card {
-    width: 80%;
-    height: 500px;
-    margin: auto;
-    padding: 10px;
-}
-
 .contact-form {
     padding: 10px;
     float: right;

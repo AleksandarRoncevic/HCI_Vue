@@ -60,3 +60,13 @@
 #contact-info{
     color: rgba(255, 255, 255, 0.8);
 }
+
+.card {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid rgb(0, 56, 31);
+    border-radius: 10px;
+    text-align: center;
+}

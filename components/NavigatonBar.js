@@ -7,7 +7,7 @@ app.component('navigation-bar', {
                 <a href="./about.html">About us</a>
                 <a href="./price.html">Rooms & Pricing</a>
                 <a href="./contact.html">Contact Us</a>
-                <a href="./book.html"><button>Book now</button></a>
+                <a href="./booking.html"><button>Book now</button></a>
             </div>
         </div>`
 });

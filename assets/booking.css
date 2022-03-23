@@ -1,0 +1,26 @@
+.column-3 {
+    float: left;
+    width: 33%;
+
+}
+.column-2 {
+    float: left;
+    width: 50%;
+}
+.row {
+    display: flex;
+    width: 70%;
+    height: 100px;
+}
+
+fieldset {
+    margin-left: 12.5%;
+    margin-bottom: 30px;
+}
+input {
+    margin-right: 10px;
+}
+label {
+    color: #fff;
+    margin-right: 10px;
+}

@@ -13,7 +13,6 @@
             background-image: url('assets/images/about.jpeg');
             background-repeat: no-repeat;
             background-size: cover;
-            width: fit-content;
         }
     </style>
 </head>
@@ -22,22 +21,26 @@
 <body>
     <div id="app">
         <navigation-bar></navigation-bar>
-        <div class="textbox box">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Etiam massa tortor, rutrum sit amet rutrum a, tincidunt eget tortor.
-                Proin at felis maximus, lobortis justo a, dignissim sapien.
-            </p>
-        </div>
-        <div class="owner-image box">
-            <img src="assets/images/owner.png" alt="Owner's photo" height="250">
-            <p>Owner's name & surname</p>
-        </div>
-
-        <div class="worker-row">
-            <div v-for="i in [1,2,3]" class="box">
-                <img src="assets/images/worker.jpeg" alt="Worker" height="50">
-                <p>Worker {{i}}</p>
+        <div class="content">
+            <div class="textbox box">
+                <b style="text-align: center;">A word from our staff</b>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Etiam massa tortor, rutrum sit amet rutrum a, tincidunt eget tortor.
+                    Proin at felis maximus, lobortis justo a, dignissim sapien.
+                </p>
+            </div>
+            <div class="owner-image box">
+                <img src="assets/images/owner.png" alt="Owner's photo" height="270">
+                <p>Owner's name & surname</p>
+            </div>
+            <div class="bottom-row">
+                <div class="worker-row">
+                    <div v-for="i in [1,2,3]" class="box worker-image">
+                        <img src="assets/images/worker.jpeg" alt="Worker" height="60">
+                        <p>Worker {{i}}</p>
+                    </div>
+                </div>
             </div>
         </div>
         <footer-bar></footer-bar>

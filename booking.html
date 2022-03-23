@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/booking.css">
+    <link rel="stylesheet" href="assets/modal.css">
     <script src="https://unpkg.com/vue@3"></script>
     <title>Hostel Website</title>
 </head>
@@ -75,7 +76,6 @@
                         <label for="private">Private room</label>
                         <br>
                         <label for="room-select" style="margin-left: 7px;">Room choices</label>
-                        <br>
                         <select name="room-select" id="room-select">
                             <option value="2-single">2bed - single</option>
                             <option value="2-king">2bed - kingsize</option>
@@ -84,11 +84,20 @@
                             <option value="10">10beds - 2 bathroom</option>
                         </select>
                     </div>
+                    <button type="submit" class="submit-button" @click="toggleModal">Submit reservation</button>
                 </form>
             </div>
         </div>
+        <div id="modal" :class="[showModal ? 'modal' : 'modal invisible']">
+            <div class="modal-header">Success!</div>
+            <div class="modal-content">
+                <p>Successfully reserved your booking. <br>
+                    Your total amount is: 300$</p>
+                <button class="close-button" @click="toggleModal">Close</button>
+            </div>
+        </div>
         <footer-bar></footer-bar>
-        <script src=" main.js"></script>
+        <script src="./main.js"></script>
         <script src="./components/NavigatonBar.js"></script>
         <script src="./components/Footer.js"></script>
         <script>

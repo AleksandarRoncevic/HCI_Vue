@@ -5,7 +5,8 @@ const app = Vue.createApp({
             roomIndex: 0,
             showPrices: false,
             workers: ["Alex", "Paul", "Jonh"],
-            owner: "Joahna Hanks"
+            owner: "Joahna Hanks",
+            showModal: true,
         };
     },
     methods: {
@@ -24,6 +25,9 @@ const app = Vue.createApp({
         setShowPrices() {
             this.showPrices = !this.showPrices;
         },
+        toggleModal() {
+            this.showModal = !this.showModal;
+        }
     }
 });
 

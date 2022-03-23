@@ -3,7 +3,9 @@ const app = Vue.createApp({
         return {
             rooms: [...roomsOffer],
             roomIndex: 0,
-            showPrices: false
+            showPrices: false,
+            workers: ["Alex", "Paul", "Jonh"],
+            owner: "Joahna Hanks"
         };
     },
     methods: {

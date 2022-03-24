@@ -6,7 +6,7 @@ const app = Vue.createApp({
             showPrices: false,
             workers: ["Alex", "Paul", "Jonh"],
             owner: "Joahna Hanks",
-            showModal: false,
+            hideModal: true,
             reservationPrice: 0
         };
     },
@@ -27,7 +27,11 @@ const app = Vue.createApp({
             this.showPrices = !this.showPrices;
         },
         toggleModal() {
-            this.showModal = !this.showModal;
+            this.hideModal = !this.hideModal;
+        },
+        setReservationPrice(newPrice) {
+            this.reservationPrice = newPrice;
+            console.log(this.reservationPrice);
         }
     }
 });

@@ -1,7 +1,11 @@
 app.component('reservation-form', {
     props: {
-        price: {
-            type: Number,
+        setPrice: {
+            type: Function(),
+            required: true,
+        },
+        showModal: {
+            type: Function(),
             required: true,
         }
     },
@@ -35,14 +39,14 @@ app.component('reservation-form', {
         <legend style="color: #fff; font-size: large;">Booking details</legend>
         <div class="column-3">
             <label for="arrival">Arrival Date:</label>
-            <input type="date" name="arrival" id="arrival">
+            <input type="date" name="arrival" id="arrival" v-model="dateA">
             <br>
             <label for="arrivalT">Arrival Time</label>
             <input type="time" name="arrivalT" id="arrivalT">
         </div>
         <div class="column-3">
             <label for="departure">Departure Date:</label>
-            <input type="date" name="departure" id="departure">
+            <input type="date" name="departure" id="departure" v-model="dateD">
             <br>
             <label for="departureT">Departure Time: Time</label>
             <input type="time" name="departureT" id="departureT">
@@ -95,12 +99,15 @@ app.component('reservation-form', {
                 phoneLetters(this.telephone) || noRoom(this.roomChoice) || noGuests(this.numOfGuest)) {
                 return;
             } else {
-                this.price = this.durationOfStay() * this.pricePerNight * this.numOfGuest;
-                alert("Please confirm. Duration: " + this.durationOfStay() + " & " + this.numOfGuest + " guests");
+                var price = this.durationOfStay() * this.pricePerNight * this.numOfGuest;
+                alert("Please confirm. Duration: " + this.durationOfStay() + " & " + this.numOfGuest + ` guests.
+                Start date: `+ this.dateA + " and end date: " + this.dateD);
+                this.$emit('set-price', price);
+                this.$emit('show-modal');
             }
         },
         durationOfStay() {
-            timeDiff = Math.abs(this.dateD - this.dateA);
+            timeDiff = Math.abs(Date.parse(this.dateD) - Date.parse(this.dateA));
             return Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
         },
 
@@ -151,7 +158,7 @@ function checkCity(city) {
     return false;
 }
 function startInPast(date) {
-    if (date < Date.now) {
+    if (date > Date.now) {
         alert('Stay must start in the future')
         return true;
     }
@@ -159,10 +166,10 @@ function startInPast(date) {
 }
 function negativeStay(durationOfStay) {
     console.log("Duration " + durationOfStay);
-    // if (durationOfStay <= 0) {
-    //     alert('Stay must be a positive amount of days!');
-    //     return true;
-    // }
+    if (durationOfStay <= 0) {
+        alert('Stay must be a positive amount of days!');
+        return true;
+    }
     return false;
 }
 

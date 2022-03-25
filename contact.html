@@ -8,14 +8,19 @@
     <link rel="stylesheet" href="assets/contact.css">
     <script src="https://unpkg.com/vue@3"></script>
 </head>
+<style>
+    body {
+        background-image: linear-gradient(210deg, rgb(1, 1, 1, 0.05), rgba(132, 37, 22, 0.8));
+    }
+</style>
 
 <body>
     <div id="app">
         <navigation-bar></navigation-bar>
-        <h1 class="title-contact">Become our newest staff member</h1>
-        <div class="card">
+        <div class="content">
+            <h3 class="title">Become our newest staff member</h3>
             <div class="container">
-                <p style="color: white; font-size: large; font-weight: bold;">Three simple steps</p>
+                <p style="color: white; font-size: larger; font-weight: bold;">Three simple steps</p>
                 <ol>
                     <li>
                         Fill form
@@ -28,40 +33,37 @@
                     </li>
                 </ol>
             </div>
-            <div class="contact-form ">
+            <div class="contact-form">
                 <form>
-
                     <fieldset title="General Information">
-                        <p>General Information</p>
-                        <label for="name">Name</label>
+                        <legend>General Information</legend>
+                        <label for="name">Name:</label>
                         <input type="text" name="ime" id="name">
-
-                        <label for="name">Surname</label>
+                        <br>
+                        <label for="name">Surname:</label>
                         <input type="text" name="prezime" id="surname">
-
-                        <label for="email">Email</label>
+                        <br>
+                        <label for="email">Email:</label>
                         <input type="text" name="email" id="email">
-
-                        <label for="name">Telephone</label>
+                        <br>
+                        <label for="name">Telephone:</label>
                         <input type="text" name="telephone" id="telephone">
-
                     </fieldset>
                     <fieldset>
-                        <div style="margin: auto;">
-                            <label for="poruka">Additional message</label>
-                            <br>
-                            <textarea name="poruka" id="poruka" cols="24" rows="6"></textarea>
-                        </div>
-                        <div style="float: right;">
-                            <label for="cv">CV</label>
-                            <input type="file" name="cv" id="cv">
-                        </div>
+                        <legend>Additional message</legend>
+                        <textarea name="poruka" id="poruka" cols="30" rows="8" style="float: left;"
+                            placeholder="Your message to us here..."></textarea>
+
+                        <label for="cv" style="font-size: larger;">CV</label>
+                        <input type="file" name="cv" id="cv" style="float: right;">
+
                     </fieldset>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="contact-submit">Submit</button>
                 </form>
             </div>
+
+            <footer-bar></footer-bar>
         </div>
-        <footer-bar></footer-bar>
     </div>
 
     <script src="main.js"></script>

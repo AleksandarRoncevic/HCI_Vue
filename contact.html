@@ -14,7 +14,7 @@
     }
 </style>
 
-<body>
+<body onload="init()">
     <div id="app">
         <navigation-bar></navigation-bar>
         <div class="content">
@@ -34,29 +34,29 @@
                 </ol>
             </div>
             <div class="contact-form">
-                <form>
+                <form method="post" onsubmit="return onSubmitContact()">
                     <fieldset title="General Information">
                         <legend>General Information</legend>
                         <label for="name">Name:</label>
-                        <input type="text" name="ime" id="name">
+                        <input type="text" name="name" id="name" minlength="3" pattern="[a-zA-Z]+" required>
                         <br>
                         <label for="name">Surname:</label>
-                        <input type="text" name="prezime" id="surname">
+                        <input type="text" name="surname" id="surname" pattern="[a-zA-Z]+" required>
                         <br>
                         <label for="email">Email:</label>
-                        <input type="text" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                         <br>
                         <label for="name">Telephone:</label>
-                        <input type="text" name="telephone" id="telephone">
+                        <input type="text" name="telephone" id="telephone" required pattern="[0-9]+" minlength="8">
                     </fieldset>
                     <fieldset>
                         <legend>Additional message</legend>
-                        <textarea name="poruka" id="poruka" cols="30" rows="8" style="float: left;"
+                        <textarea name="poruka" id="poruka" cols="25" rows="8" style="float: left;"
                             placeholder="Your message to us here..."></textarea>
-
-                        <label for="cv" style="font-size: larger;">CV</label>
-                        <input type="file" name="cv" id="cv" style="float: right;">
-
+                        <div style="float: right;">
+                            <label for="cv" style="font-size: larger;">CV</label>
+                            <input type="file" name="cv" id="cv" required>
+                        </div>
                     </fieldset>
                     <button type="submit" id="contact-submit">Submit</button>
                 </form>

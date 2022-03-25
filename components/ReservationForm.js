@@ -195,11 +195,3 @@ function noGuests(num) {
     }
     return false;
 }
-
-function chechMail(mail) {
-    if (/^[A-Z0-9+_.-]+@[A-Z0-9.-]+$/.test(mail)) {
-        alert("Emails must have valid format 'name@domain.com' ");
-        return true;
-    }
-    return false;
-}

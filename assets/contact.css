@@ -13,11 +13,10 @@
 }
 .container ol {
     display: inline-block;
-    text-align: center;
     color: white;
 }
 .container li {
-    font-size: large;
+    font-size: xx-large;
     margin-bottom: 10px;
 }
 

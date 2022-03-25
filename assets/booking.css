@@ -3,10 +3,6 @@
     width: 33%;
 
 }
-.column-2 {
-    float: left;
-    width: 50%;
-}
 .row {
     display: flex;
     width: 70%;

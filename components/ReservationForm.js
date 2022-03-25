@@ -35,28 +35,21 @@ app.component('reservation-form', {
             <input type="text" name="passport" id="passport" placeholder="Your passport ID " v-model="passport">
         </div>
     </fieldset>
-    <fieldset title="booking " class="row">
+    <fieldset title="booking" class="row">
         <legend style="color: #fff; font-size: large;">Booking details</legend>
         <div class="column-3">
             <label for="arrival">Arrival Date:</label>
-            <input type="date" name="arrival" id="arrival" v-model="dateA">
             <br>
-            <label for="arrivalT">Arrival Time</label>
-            <input type="time" name="arrivalT" id="arrivalT">
+            <input type="date" name="arrival" id="arrival" v-model="dateA">
         </div>
         <div class="column-3">
             <label for="departure">Departure Date:</label>
             <input type="date" name="departure" id="departure" v-model="dateD">
-            <br>
-            <label for="departureT">Departure Time: Time</label>
-            <input type="time" name="departureT" id="departureT">
         </div>
         <div class="column-3">
             <label for="guests">Number of guests?</label>
-            <input type="number" name="guests" id="guests" min="1" max="10" v-model="numOfGuest">
             <br>
-            <input type="checkbox" name="adults">
-            <label for="adults">Atleast one adult?</label>
+            <input type="number" name="guests" id="guests" min="1" max="10" v-model="numOfGuest">
         </div>
     </fieldset>
     <div style="margin-top: 20px;">

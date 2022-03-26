@@ -1,9 +1,9 @@
 app.component('footer-bar', {
     template: `<div class="footer">
     <span>
-        <img class="logo" src="assets/images/logo.png" alt=" Opet logo">
+        <img class="logo" src="assets/images/logo.png" alt="Opet logo">
     </span>
-    <span>
+    <span id="links">
         <a href="./index.html">Home</a>
         <a href="./about.html">About us</a>
         <a href="./contact.html">Contact Us</a>

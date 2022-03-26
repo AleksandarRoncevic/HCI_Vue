@@ -18,28 +18,30 @@
 <body>
     <div id="app">
         <navigation-bar></navigation-bar>
-        <div>
-            <h2 class="title" style="text-align: center; font-size: xx-large;">Create you booking now</h2>
-            <div class="card" style="background-color: rgb(0, 51, 30);">
-                <reservation-form @set-price="setReservationPrice" @show-modal="toggleModal"></reservation-form>
+        <div class="content">
+            <div>
+                <h2 class="title" style="text-align: center; font-size: xx-large;">Create you booking now</h2>
+                <div class="card" style="background-color: rgb(0, 51, 30);">
+                    <reservation-form @set-price="setReservationPrice" @show-modal="toggleModal"></reservation-form>
+                </div>
             </div>
-        </div>
-        <div id="modal" class="modal" v-show="!hideModal">
-            <div class="modal-header">Success!</div>
-            <div class="modal-content">
-                <p>Successfully reserved your booking. <br>
-                    Your total amount is: {{reservationPrice}}$</p>
-                <button class="close-button" @click="toggleModal">Close</button>
+            <div id="modal" class="modal" v-show="!hideModal">
+                <div class="modal-header">Success!</div>
+                <div class="modal-content">
+                    <p>Successfully reserved your booking. <br>
+                        Your total amount is: {{reservationPrice}}$</p>
+                    <button class="close-button" @click="toggleModal">Close</button>
+                </div>
             </div>
+            <footer-bar></footer-bar>
+            <script src="./main.js"></script>
+            <script src="./components/ReservationForm.js"></script>
+            <script src="./components/NavigatonBar.js"></script>
+            <script src="./components/Footer.js"></script>
+            <script>
+                const mountedApp = app.mount('#app')
+            </script>
         </div>
-        <footer-bar></footer-bar>
-        <script src="./main.js"></script>
-        <script src="./components/ReservationForm.js"></script>
-        <script src="./components/NavigatonBar.js"></script>
-        <script src="./components/Footer.js"></script>
-        <script>
-            const mountedApp = app.mount('#app')
-        </script>
     </div>
 </body>
 

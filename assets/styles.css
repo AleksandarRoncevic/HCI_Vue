@@ -36,29 +36,38 @@
     position: fixed;
     left: 0;
     bottom: 0;
+    display: flex;
     width: 100%;
-    height: 100px;
+    height: 110px;
     text-align: center;
     background-color: #842416;
 }
 .footer .logo {
     float: left;
-    height: 150px;
-}
-.footer a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    padding: 15px;
+    height: 100px;
 }
 
-.footer span {
-        width: 25px;
-        height: 25px;
-        padding: 20px;
+span > a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: block;
+    height: min-content;
+    margin-top: 10px;
+}
+#links {
+    margin: auto;
+    width: 30%;
 }
 
 #contact-info{
+    margin: auto;
+    width: 30%;
     color: rgba(255, 255, 255, 0.8);
+    margin-top: 0px;
+}
+
+#subscribe {
+    margin: auto;
 }
 
 .card {
@@ -79,4 +88,11 @@
     margin-top: 45px;
     border-radius: 8px;
     height: 50px;
+}
+.book-button {
+    color: white;
+    background-color: #842416;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: medium;
 }

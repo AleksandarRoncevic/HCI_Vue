@@ -1,7 +1,7 @@
 .column-3 {
     float: left;
     width: 33%;
-
+    padding: 7px;
 }
 .row {
     display: flex;
@@ -20,4 +20,8 @@ label {
     color: #fff;
     margin-right: 10px;
 }
-
+.content {
+    position: relative;
+    height: 85vh;
+    margin-top: 75px;
+}

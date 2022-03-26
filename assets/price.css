@@ -64,7 +64,7 @@
     padding: 5px;
 } 
 .active {
-    color: orange;
+    color: rgb(255, 160, 0);
 }
 
 ul {

@@ -32,7 +32,7 @@ app.component('reservation-form', {
             <input type="text" name="telephone" id="telephone" placeholder="Your Telephone" v-model="telephone">
             <br>
             <label for="passport">Passport ID:</label>
-            <input type="text" name="passport" id="passport" placeholder="Your passport ID " v-model="passport">
+            <input type="text" name="passport" id="passport" placeholder="Your passport ID" v-model="passport">
         </div>
     </fieldset>
     <fieldset title="booking" class="row">
@@ -40,11 +40,12 @@ app.component('reservation-form', {
         <div class="column-3">
             <label for="arrival">Arrival Date:</label>
             <br>
-            <input type="date" name="arrival" id="arrival" v-model="dateA">
+            <input type="date" name="arrival" id="arrival" v-model="dateA" required>
         </div>
         <div class="column-3">
             <label for="departure">Departure Date:</label>
-            <input type="date" name="departure" id="departure" v-model="dateD">
+            <br>
+            <input type="date" name="departure" id="departure" v-model="dateD" required>
         </div>
         <div class="column-3">
             <label for="guests">Number of guests?</label>
@@ -78,19 +79,19 @@ app.component('reservation-form', {
             email: '',
             telephone: '',
             passport: '',
-            numOfGuest: null,
+            numOfGuest: 0,
             dateA: null,
             dateD: null,
             private: false,
-            roomChoice: null,
+            roomChoice: "",
         }
     },
     methods: {
         onSubmit() {
             if (checkName(this.name) || checkName(this.surname) || checkCity(this.city) ||
-                negativeStay(this.durationOfStay) || startInPast(this.dateA) ||
-                phoneLetters(this.telephone) || noRoom(this.roomChoice) || noGuests(this.numOfGuest)) {
-                return;
+                checkTelephone(this.telephone) || checkPassport(this.passport) || negativeStay(this.durationOfStay()) ||
+                startInPast(this.dateA) || noRoom(this.roomChoice) || noGuests(this.numOfGuest)) {
+                return false;
             } else {
                 var price = this.durationOfStay() * this.pricePerNight * this.numOfGuest;
                 alert("Please confirm. Duration: " + this.durationOfStay() + " & " + this.numOfGuest + ` guests.
@@ -133,7 +134,7 @@ function checkName(name) {
         return true;
     };
     if (!/^[a-zA-Z]+$/.test(name.trim())) {
-        alert('Name/Surname should only have any letters')
+        alert('Name/Surname should only have any letters');
         return true;
     };
     return false;
@@ -145,14 +146,14 @@ function checkCity(city) {
         return true;
     };
     if (!/^[a-zA-Z]+$/.test(city.trim())) {
-        alert('City name should only have any letters')
+        alert('City name should only have any letters');
         return true;
     };
     return false;
 }
 function startInPast(date) {
     if (date > Date.now) {
-        alert('Stay must start in the future')
+        alert('Stay must start in the future');
         return true;
     }
     return false;
@@ -166,23 +167,33 @@ function negativeStay(durationOfStay) {
     return false;
 }
 
-function phoneLetters(telephone) {
-    if (/^[a-zA-Z]+$/.test(telephone)) {
-        alert('Telephone should not have any letters')
+function checkTelephone(telephone) {
+    if (telephone.trim().length < 6) {
+        alert('Telephone should be atleast 7 numbers long');
+        return true;
+    } else if (!/^\d+$/.test(telephone)) {
+        alert('Telephone should not have any letters');
         return true;
     };
     return false;
 }
+function checkPassport(passport) {
+    if (passport.trim().length < 5) {
+        alert('Passport should be atleast 6 characters long');
+        return true;
+    }
+    return false;
+}
 
 function noRoom(choice) {
-    if (choice === null) {
+    if (choice === null || choice === "") {
         alert('Please pick a room');
         return true;
     }
     return false;
 }
 function noGuests(num) {
-    if (num == 0 || num == null) {
+    if (num == 0) {
         alert('Please select the amount of guests');
         return true;
     }

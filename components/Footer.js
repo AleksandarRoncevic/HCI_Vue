@@ -16,7 +16,7 @@ app.component('footer-bar', {
     <span id="subscribe">
         <form onsubmit="onSubmitSubscribe()">
             <label for="subs" style="color: rgba(255, 255, 255, 0.8);">Get our newsletter: </label>
-            <input type="mail" name="mail" id="subs">
+            <input type="email" name="mail" id="subs" required>
             <button type="submit">Subscribe</button>
         </form>
     </span>

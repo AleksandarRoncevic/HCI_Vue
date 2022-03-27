@@ -38,6 +38,7 @@ function checkSurname() {
 }
 
 function checkEmail() {
+    this.setCustomValidity("");
     if (this.validity.valueMissing) {
         this.setCustomValidity('Please enter your email.');
     } else if (this.validity.patternMismatch) {
@@ -55,6 +56,15 @@ function checkTelephone() {
 }
 
 function onSubmitContact() {
-    confirm('Dear ' + nameInput.value + " " + surnameInput.value + `, thank you
-    for your submission. We will contact you on the email provided: `+ emailInput);
+    var nameInput = document.getElementById('name');
+    var surnameInput = document.getElementById('surname');
+    var emailInput = document.getElementById('email');
+
+    confirm('Dear ' + nameInput.value + " " + surnameInput.value + `, thank you for your submission. 
+    We will contact you on the email provided: `+ emailInput.value);
+}
+
+function onSubmitSubscribe() {
+    var emailInput = document.getElementById('subs');
+    confirm('You have successfully subscribed to our newsletter with: ' + emailInput.value);
 }

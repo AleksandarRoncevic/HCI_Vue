@@ -152,7 +152,7 @@ function checkCity(city) {
     return false;
 }
 function startInPast(date) {
-    if (date > Date.now) {
+    if (date < Date.now) {
         alert('Stay must start in the future');
         return true;
     }
